@@ -1,5 +1,5 @@
 
-## Install
+### Install
 ```bash
 pip install mehta
 ```
@@ -26,12 +26,8 @@ bot.run("TOKEN")
 
 ### CLI
 ```bash
-mehta run:<filename> # mehta run:app or app.py
+mehta run:<filename> # mehta run:app (.py)
 ```
-```bash
-mehta run:<filename> token=123456789:ABC_DEF_GHI_JKL_MNO_PQR_STU # Recommended: without bot.run()
-```
-
 ### Response Types
 ```python
 # Text - Simple text message
