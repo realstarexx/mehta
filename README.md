@@ -113,7 +113,7 @@ def hi(message): return "Hi, rate limit 1/min, timeout 3s!"
 | edit_message | message_id, text, parse, receiver, preview, buttons, caption, reply_markup | Edit message with buttons |
 | answer_callback | query_id, text, show_alert, url | Answer callback query (inline button) |
 
-### Examples Table
+### Send Message
 | Function Call                                      | Equivalent Dictionary                                              |
 |-----------------------------------------------------------|---------------------------------------------------------------------------|
 | `text('{content}', parse='{parse}', receiver='{receiver}', reply_to='{reply_to}', preview='{preview}', notify='{notify}')` | `{'type': 'text', 'text': '{content}', 'parse': '{parse}', 'receiver': '{receiver}', 'reply_to': '{reply_to}', 'preview': '{preview}', 'notify': '{notify}'}` |
