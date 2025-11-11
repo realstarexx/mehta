@@ -1,8 +1,24 @@
-# Mehta
-**A beginner-friendly telegram sdk providing intuitive command decorators.**<br>
-This package is a **wrapper** that uses [pyTeleBot](https://github.com/eternnoir/pyTelegramBotAPI) and [Telethon](https://github.com/LonamiWebs/Telethon) for Telegram-related features.  
-When you install it, all required dependencies including [pyTeleBot](https://github.com/eternnoir/pyTelegramBotAPI), [Telethon](https://github.com/LonamiWebs/Telethon), and others are automatically installed to ensure full functionality and seamless integration.
+<h1 align="center">Mehta</h1>
 
+<p align="center">
+  <b>A beginner-friendly telegram sdk providing intuitive command decorators.</b><br>
+  This package is a <b>wrapper</b> that uses 
+  <a href="https://github.com/eternnoir/pyTelegramBotAPI">pyTeleBot</a> and 
+  <a href="https://github.com/LonamiWebs/Telethon">Telethon</a> for Telegram-related features.<br>
+  When you install it, all required dependencies including 
+  <a href="https://github.com/eternnoir/pyTelegramBotAPI">pyTeleBot</a>, 
+  <a href="https://github.com/LonamiWebs/Telethon">Telethon</a>, 
+  and others are automatically installed to ensure full functionality and seamless integration.
+</p>
+
+<br>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.1.5-blue?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/python-3.6%2B-green?style=for-the-badge" alt="Python">
+  <img src="https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/created%20by-Starexx-purple?style=for-the-badge" alt="Created by Starexx">
+</p>
 
 ## Installation
 ```bash
@@ -181,7 +197,7 @@ bot.run("YOUR_BOT_TOKEN")
 
 **Webhook**:
 ```python
-bot.webhook("YOUR_BOT_TOKEN", "https://yourdomain.com/" [,port]) # Registers webhook and listens for messages via HTTP.
+bot.webhook("YOUR_BOT_TOKEN", "https://yourdomain.com/" [,port]) # Webhook and listens for messages via HTTP.
 ```
 - Second arg: webhook URL.
 - Optional: set a custom port (default 8000)
@@ -198,11 +214,11 @@ bot = client()
 
 @bot.commands(['start'])
 def start(message):
-    return text("Hello from Telethon client")
+    return { 'type': 'text', 'text': "Hello from mehta client" }
 
 @bot.message()
 def echo(message):
-    return text(f"Echo: {message.text}")
+    return text(f"You said: {message.text}")
 
 bot.run(api_id=YOUR_API_ID', api_hash='YOUR_API_HASH')
 ```
