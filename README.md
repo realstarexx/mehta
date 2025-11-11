@@ -58,8 +58,6 @@ def hi(message): return "Hi, rate limit 1/min, timeout 3s!"
 | animation | file, caption, parse, receiver, reply_to, notify | Send GIF/animation |
 | mediagroup | media_list, receiver, reply_to, notify | Send multiple media items |
 
-***
-
 ### Location and Interaction
 
 | Function | Parameters | Use Case |
@@ -69,8 +67,6 @@ def hi(message): return "Hi, rate limit 1/min, timeout 3s!"
 | contact | phone, first_name, last_name, receiver, reply_to, notify | Send contact |
 | poll | question, options, receiver, reply_to, notify | Send Telegram poll |
 | dice | emoji, receiver, reply_to, notify | Send dice animation |
-
-***
 
 ### Message Management
 
@@ -83,8 +79,6 @@ def hi(message): return "Hi, rate limit 1/min, timeout 3s!"
 | pin | message_id, receiver, notify | Pin message in chat |
 | unpin | message_id, receiver | Unpin one message |
 | unpin_all | receiver | Unpin all messages |
-
-***
 
 ### Chat Control and Moderation
 
@@ -99,8 +93,6 @@ def hi(message): return "Hi, rate limit 1/min, timeout 3s!"
 | member_info | user_id, receiver | Get info about specific user |
 | invite_link | receiver | Generate chat invite link |
 
-***
-
 ### Chat Configuration
 
 | Function | Parameters | Use Case |
@@ -109,8 +101,6 @@ def hi(message): return "Hi, rate limit 1/min, timeout 3s!"
 | set_description | description, receiver | Set chat description |
 | set_photo | file, receiver | Set chat photo |
 | delete_photo | receiver | Delete chat photo |
-
-***
 
 ### Inline and Keyboard Components
 
@@ -122,8 +112,6 @@ def hi(message): return "Hi, rate limit 1/min, timeout 3s!"
 | force_reply | text, parse, receiver, reply_to, preview, notify | Force user reply |
 | edit_message | message_id, text, parse, receiver, preview, buttons, caption, reply_markup | Edit message with buttons |
 | answer_callback | query_id, text, show_alert, url | Answer callback query (inline button) |
-
-***
 
 ### Examples Table
 | Function Call                                      | Equivalent Dictionary                                              |
@@ -186,12 +174,12 @@ def demo(message):
 ```
 
 ## Using Webhook & Polling
-**Polling (default):**
+**Polling**:
 ```python
 bot.run("YOUR_BOT_TOKEN")
 ```
 
-**Webhook:**
+**Webhook**:
 ```python
 bot.webhook("YOUR_BOT_TOKEN", "https://yourdomain.com/" [,port]) # Registers webhook and listens for messages via HTTP.
 ```
