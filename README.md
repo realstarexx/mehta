@@ -931,7 +931,7 @@ return member_count(
 )
 ```
 
-**Optional*: `receiver`
+**Optional**: `receiver`
 
 ### Get Member Info
 ```python
