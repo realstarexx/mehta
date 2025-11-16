@@ -1,12 +1,7 @@
-import os, sys, traceback
+import os, sys, tracebace
+
 from telethon import TelegramClient, events
 from telethon.tl.types import Message
-
-"""
-[metadata]
-author=starexx
-license=MIT
-"""
 
 
 class client:
