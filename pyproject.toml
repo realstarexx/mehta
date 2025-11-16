@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "Mehta"
+version = "1.1.6"
+description = "A decorator-based SDK for building Telegram bots with clean syntax, modular structure, and powerful features."
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { text = "MIT" }
+authors = [
+    { name = "Ankit Mehta", email = "starexx.m@gmail.com" },
+]
+maintainers = [
+    { name = "Ankit Mehta", email = "starexx.m@gmail.com" },
+]
+
+requires-python = ">=3.7"
+keywords = ["telegram", "bot", "sdk", "telethon", "decorator", "framework"]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Information Technology",
+    "Topic :: Communications :: Chat",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+dependencies = [
+    "pyTeleBot>=0.1.0",
+    "telethon>=1.30.0",
+    "requests>=2.25.0"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/realstarexx/mehta"
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8"
+]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme"
+]
+
+
+[project.scripts]
+mehta = "mehta:main"
+
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.include-package-data]
+include-package-data = true
