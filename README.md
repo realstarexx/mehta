@@ -137,18 +137,6 @@ def hi(message):
 ## Response Types
 ### Text Message
 ```python
-return {
-    'type': 'text',
-    'text': 'Your message here',
-    'parse': 'HTML',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'preview': False,
-    'notify': False
-}
-```
-
-```python
 return text(
     content="Hello World",
     parse="HTML",
@@ -161,18 +149,6 @@ return text(
 **Optional**: `parse`, `receiver`, `reply_to`, `preview`, `notify`
 
 ### Photo Message
-```python
-return {
-    'type': 'photo',
-    'file': 'https://picsum.photos/400/300',
-    'caption': 'Photo caption',              
-    'parse': 'HTML',                       
-    'receiver': message.chat.id,         
-    'reply_to': message.message_id,          
-    'notify': False                        
-}
-```
-
 ```python
 return photo(
     file="https://picsum.photos/400/300",
@@ -189,18 +165,6 @@ return photo(
 
 ### Video Message
 ```python
-return {
-    'type': 'video',
-    'file': 'video.mp4',
-    'caption': 'Video description',
-    'parse': 'HTML',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'notify': False
-}
-```
-
-```python
 return video(
     file="video.mp4",
     caption="My video",
@@ -216,18 +180,6 @@ return video(
 
 ### Audio Message
 ```python
-return {
-    'type': 'audio',
-    'file': 'audio.mp3',
-    'caption': 'Audio title',
-    'parse': 'HTML',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'notify': False
-}
-```
-
-```python
 return audio(
     file="audio.mp3", 
     caption="Song title",
@@ -242,19 +194,6 @@ return audio(
 
 
 ### Document Message
-
-```python
-return {
-    'type': 'document',
-    'file': 'document.pdf',
-    'caption': 'File description',
-    'parse': 'HTML',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'notify': False
-}
-```
-
 ```python
 return document(
     file="document.pdf",
@@ -270,19 +209,6 @@ return document(
 
 
 ### Voice Message
-
-```python
-return {
-    'type': 'voice',
-    'file': 'voice.ogg',
-    'caption': 'Voice note',
-    'parse': 'HTML',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'notify': False
-}
-```
-
 ```python
 return voice(
     file="voice.ogg",
@@ -300,16 +226,6 @@ return voice(
 ### Sticker Message
 
 ```python
-return {
-    'type': 'sticker',
-    'file': 'sticker.webp',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'notify': False
-}
-```
-
-```python
 return sticker(
     file="sticker.webp",
     receiver=message.chat.id,
@@ -322,19 +238,6 @@ return sticker(
 
 
 ### Animation Message
-
-```python
-return {
-    'type': 'animation',
-    'file': 'animation.gif',
-    'caption': 'GIF description',
-    'parse': 'HTML',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'notify': False
-}
-```
-
 ```python
 return animation(
     file="animation.gif",
@@ -350,18 +253,6 @@ return animation(
 
 
 ### Location Message
-
-```python
-return {
-    'type': 'location',
-    'lat': 28.6139,
-    'lon': 77.2090,
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'notify': False
-}
-```
-
 ```python
 return location(
     lat=28.6139,
@@ -376,20 +267,6 @@ return location(
 
 
 ### Venue Message
-
-```python
-return {
-    'type': 'venue',
-    'lat': 28.6139,
-    'lon': 77.2090,
-    'title': 'Venue Name',
-    'address': 'Venue Address',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'notify': False
-}
-```
-
 ```python
 return venue(
     lat=28.6139,
@@ -406,19 +283,6 @@ return venue(
 
 
 ### Contact Message
-
-```python
-return {
-    'type': 'contact',
-    'phone': '+1234567890',
-    'first_name': 'John',
-    'last_name': 'Doe',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'notify': False
-}
-```
-
 ```python
 return contact(
     phone="+1234567890",
@@ -434,18 +298,6 @@ return contact(
 
 
 ### Poll Message
-
-```python
-return {
-    'type': 'poll',
-    'question': 'Favorite color?',
-    'options': ['Red', 'Blue', 'Green'],
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'notify': False
-}
-```
-
 ```python
 return poll(
     question="Favorite programming language?",
@@ -460,17 +312,6 @@ return poll(
 
 
 ### Dice Message
-
-```python
-return {
-    'type': 'dice',
-    'emoji': '🎯',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'notify': False
-}
-```
-
 ```python
 return dice(
     emoji="🎯",
@@ -484,19 +325,6 @@ return dice(
 
 
 ### Media Group Message
-
-```python
-return {
-    'type': 'mediagroup',
-    'media': [
-        {'type': 'photo', 'file': 'photo1.jpg', 'caption': 'First photo'},
-        {'type': 'video', 'file': 'video1.mp4', 'caption': 'A video'}
-    ],
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'notify': False
-}
-```
 
 ```python
 media_list = [
@@ -515,20 +343,6 @@ return mediagroup(
 **Optional**: `receiver`, `reply_to`, `notify`
 
 ### Reply Keyboard
-
-```python
-return {
-    'type': 'keyboard',
-    'text': 'Choose option:',
-    'buttons': [['Button 1', 'Button 2'], ['Button 3']],
-    'parse': 'HTML',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'preview': False,
-    'notify': False
-}
-```
-
 ```python
 buttons = [['Button 1', 'Button 2'], ['Button 3']]
 
@@ -547,22 +361,6 @@ return keyboard(
 
 
 ### Inline Keyboard
-
-```python
-return {
-    'type': 'inline',
-    'text': 'Select:',
-    'buttons': [
-        [{'text': 'Website', 'url': 'https://google.com'}, {'text': 'Click', 'data': 'button_click'}]
-    ],
-    'parse': 'HTML',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'preview': False,
-    'notify': False
-}
-```
-
 ```python
 website_btn = button("Website", url="https://google.com")
 callback_btn = button("Click", data="button_click")
@@ -583,19 +381,6 @@ return inline(
 
 
 ### Remove Keyboard
-
-```python
-return {
-    'type': 'remove_keyboard',
-    'text': 'Keyboard removed',
-    'parse': 'HTML',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'preview': False,
-    'notify': False
-}
-```
-
 ```python
 return remove_keyboard(
     text="Keyboard removed",
@@ -611,19 +396,6 @@ return remove_keyboard(
 
 
 ### Force Reply
-
-```python
-return {
-    'type': 'force_reply',
-    'text': 'Please reply',
-    'parse': 'HTML',
-    'receiver': message.chat.id,
-    'reply_to': message.message_id,
-    'preview': False,
-    'notify': False
-}
-```
-
 ```python
 return force_reply(
     text="Please reply to this message",
@@ -638,16 +410,7 @@ return force_reply(
 **Optional**: `parse`, `receiver`, `reply_to`, `preview`, `notify`
 
 
-Delete Message
-
-```python
-return {
-    'type': 'delete',
-    'message_id': message.message_id,
-    'receiver': message.chat.id
-}
-```
-
+### Delete Message
 ```python
 return delete(
     message_id=123,
@@ -659,18 +422,6 @@ return delete(
 
 
 ### Edit Message Text
-
-```python
-return {
-    'type': 'edittext',
-    'message_id': 123,
-    'text': 'Updated text',
-    'parse': 'HTML',
-    'receiver': message.chat.id,
-    'preview': False
-}
-```
-
 ```python
 return edit(
     message_id=message.message_id,
@@ -685,17 +436,6 @@ return edit(
 
 
 ### Forward Message
-
-```python
-return {
-    'type': 'forward',
-    'to': -100123456789,
-    'message_id': message.message_id,
-    'receiver': message.chat.id,
-    'notify': False
-}
-```
-
 ```python
 return forward(
     to_chat=-100123456789,
@@ -709,19 +449,6 @@ return forward(
 
 
 ### Copy Message
-
-```python
-return {
-    'type': 'copy',
-    'to': -100123456789,
-    'message_id': message.message_id,
-    'caption': 'New caption',
-    'parse': 'HTML',
-    'receiver': message.chat.id,
-    'notify': False
-}
-```
-
 ```python
 return copy(
     to_chat=-100123456789,
@@ -737,16 +464,6 @@ return copy(
 
 
 ### Pin Message
-
-```python
-return {
-    'type': 'pin',
-    'message_id': message.message_id,
-    'receiver': message.chat.id,
-    'notify': False
-}
-```
-
 ```python
 return pin(
     message_id=123,
@@ -759,15 +476,6 @@ return pin(
 
 
 ### Unpin Message
-
-```python
-return {
-    'type': 'unpin',
-    'message_id': 123,
-    'receiver': message.chat.id
-}
-```
-
 ```python
 return unpin(
     message_id=123,
@@ -779,14 +487,6 @@ return unpin(
 
 
 ### Unpin All Messages
-
-```python
-return {
-    'type': 'unpinall',
-    'receiver': message.chat.id
-}
-```
-
 ```python
 return unpin_all(
     receiver=message.chat.id
@@ -795,19 +495,7 @@ return unpin_all(
 
 **Optional**: `receiver`
 
-
-
 ### Ban User
-
-```python
-return {
-    'type': 'ban',
-    'user': message.from_user.id,
-    'until': 1609459200,
-    'receiver': message.chat.id
-}
-```
-
 ```python
 return ban(
     user_id=message.from_user.id,
@@ -820,15 +508,6 @@ return ban(
 
 
 ### Unban User
-
-```python
-return {
-    'type': 'unban',
-    'user': 123456789,
-    'receiver': message.chat.id
-}
-```
-
 ```python
 return unban(
     user_id=123456789,
@@ -840,21 +519,6 @@ return unban(
 
 
 ### Restrict User
-
-```python
-return {
-    'type': 'restrict',
-    'user': message.from_user.id,
-    'send': False,
-    'media': False,
-    'polls': False,
-    'other': False,
-    'previews': False,
-    'until': 1609459200,
-    'receiver': message.chat.id
-}
-```
-
 ```python
 permissions = {'send': False, 'media': False, 'polls': False, 'other': False, 'previews': False}
 
@@ -870,23 +534,6 @@ return restrict(
 
 
 ### Promote User
-
-```python
-return {
-    'type': 'promote',
-    'user': message.from_user.id,
-    'change_info': True,
-    'post': True,
-    'edit': True,
-    'delete': True,
-    'invite': True,
-    'restrict': True,
-    'pin': True,
-    'promote': True,
-    'receiver': message.chat.id
-}
-```
-
 ```python
 privileges = {'change_info': True, 'post': True, 'edit': True, 'delete': True, 'invite': True, 'restrict': True, 'pin': True, 'promote': True}
 
@@ -902,13 +549,6 @@ return promote(
 
 ### Get Chat Info
 ```python
-return {
-    'type': 'chatinfo',
-    'receiver': message.chat.id
-}
-```
-
-```python
 return chat_info(
     receiver=message.chat.id
 )
@@ -919,13 +559,6 @@ return chat_info(
 
 ### Get Member Count
 ```python
-return {
-    'type': 'membercount',
-    'receiver': message.chat.id
-}
-```
-
-```python
 return member_count(
     receiver=message.chat.id
 )
@@ -934,14 +567,6 @@ return member_count(
 **Optional**: `receiver`
 
 ### Get Member Info
-```python
-return {
-    'type': 'memberinfo',
-    'user': message.from_user.id,
-    'receiver': message.chat.id
-}
-```
-
 ```python
 return member_info(
     user_id=message.from_user.id,
@@ -953,14 +578,6 @@ return member_info(
 
 
 ### Get Invite Link
-
-```python
-return {
-    'type': 'invitelink',
-    'receiver': message.chat.id
-}
-```
-
 ```python
 return invite_link(
     receiver=message.chat.id
@@ -971,15 +588,6 @@ return invite_link(
 
 
 ### Set Chat Title
-
-```python
-return {
-    'type': 'settitle',
-    'title': 'New Chat Title',
-    'receiver': message.chat.id
-}
-```
-
 ```python
 return set_title(
     title="New Chat Title",
@@ -991,15 +599,6 @@ return set_title(
 
 
 ### Set Chat Description
-
-```python
-return {
-    'type': 'setdescription',
-    'description': 'New description',
-    'receiver': message.chat.id
-}
-```
-
 ```python
 return set_description(
     description="New chat description",
@@ -1011,14 +610,6 @@ return set_description(
 
 ### Set Chat Photo
 ```python
-return {
-    'type': 'setphoto',
-    'file': 'photo.jpg',
-    'receiver': message.chat.id
-}
-```
-
-```python
 return set_photo(
     file="chat_photo.jpg",
     receiver=message.chat.id
@@ -1027,13 +618,6 @@ return set_photo(
 **Optional**: `receiver`
 
 ### Delete Chat Photo
-```python
-return {
-    'type': 'deletephoto',
-    'receiver': message.chat.id
-}
-```
-
 ```python
 return delete_photo(
     receiver=message.chat.id
@@ -1045,16 +629,6 @@ return delete_photo(
 
 ### Answer Callback Query
 ```python
-return {
-    'type': 'answercallback',
-    'query_id': call.id,
-    'text': 'Button clicked!',
-    'show_alert': True,
-    'url': 'https://example.com'
-}
-```
-
-```python
 return answer_callback(
     query_id=call.id,
     text="Action completed!",
@@ -1065,21 +639,7 @@ return answer_callback(
 
 **Optional**: `text`, `show_alert`, `url`
 
-
 ### Edit Message (Callback)
-```python
-return {
-    'type': 'editmessage',
-    'message_id': call.message.message_id,
-    'text': 'Message updated!',
-    'caption': 'New caption',
-    'parse': 'HTML',
-    'receiver': call.message.chat.id,
-    'preview': False,
-    'buttons': [[{'text': 'New Button', 'data': 'new_data'}]]
-}
-```
-
 ```python
 new_buttons = [[button("New Button 1", data="new1")]]
 
