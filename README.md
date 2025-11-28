@@ -17,13 +17,12 @@
   <img src="https://img.shields.io/badge/created%20by-Starexx-purple?style=for-the-badge" alt="Created by Starexx">
 </p>
 
-
 ## Installation
 ```bash
 pip install mehta
 ```
 
-## Basic Setup
+### Basic Setup
 ```python
 from mehta import telegram
 
@@ -39,6 +38,13 @@ def echo(message):
 
 bot.run("YOUR_BOT_TOKEN")
 ```
+- **Auto-injection:** Helper functions (`text`, `photo`, etc.) are imported as globals for you automatically when you create a bot/client instance.
+- **Return style:** All handlers can return either a dictionary or use the provided helper function style.
+- **Error handling:** For both pyTelebot and Telethon, errors are printed nicely by default.
+- **CLI:** `mehta run:yourfile.py`, auto detects main bot and starts automatically.
+- **Rate limits:** Use `rate_limit` in command decorators for anti-spam.
+- **Timeout:** Force handlers to exit after N seconds if unresponsive.
+
 
 ## Decorators Reference
 
@@ -691,12 +697,3 @@ def echo(message):
 bot.run(api_id=YOUR_API_ID', api_hash='YOUR_API_HASH')
 ```
 - Works with all **possible** functions (`text`, `photo`, `video`, etc).
-
-## FAQ & Notes
-- **Auto-injection:** Helper functions (`text`, `photo`, etc.) are imported as globals for you automatically when you create a bot/client instance.
-- **Return style:** All handlers can return either a dictionary or use the provided helper function style.
-- **Error handling:** For both pyTelebot and Telethon, errors are printed nicely by default.
-- **CLI:** `mehta run:yourfile.py`—auto detects main bot and starts automatically.
-- **Rate limits:** Use `rate_limit` in command decorators for anti-spam.
-- **Timeout:** Force handlers to exit after N seconds if unresponsive.
-- **Extending:** For new types/variants, copy the dict pattern.
