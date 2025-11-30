@@ -38,7 +38,7 @@ def echo(message):
 
 bot.run("YOUR_BOT_TOKEN")
 ```
-- **Auto-injection:** Helper functions (`text`, `photo`, etc.) are imported as globals for you automatically when you create a bot/client instance.
+- **Auto-injection:** Helper functions (`text`, `photo`, etc.) are imported as globals for you automatically when you create a bot/client instance and works without prefixes.
 - **Return style:** All handlers can return either a dictionary or use the provided helper function style.
 - **Error handling:** For both pyTelebot and Telethon, errors are printed nicely by default.
 - **CLI:** `mehta run:yourfile.py`, auto detects main bot and starts automatically.
