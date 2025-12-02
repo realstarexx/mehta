@@ -14,8 +14,6 @@
   <img src="https://img.shields.io/badge/version-1.1.5-blue?style=for-the-badge" alt="Version">
   <img src="https://img.shields.io/badge/python-3.6%2B-green?style=for-the-badge" alt="Python">
   <img src="https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge" alt="License">
-  <img src="https://img.shields.io/badge/created%20by-Starexx-purple?style=for-the-badge" alt="Created by Starexx">
-</p>
 
 ## Installation
 ```bash
