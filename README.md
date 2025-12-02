@@ -11,9 +11,9 @@
 </p>
 <br>
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.1.5-blue?style=for-the-badge" alt="Version">
-  <img src="https://img.shields.io/badge/python-3.6%2B-green?style=for-the-badge" alt="Python">
-  <img src="https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/version-1.1.6-green?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/python-3.6%2B-blue?style=for-the-badge" alt="Python">
+  <img src="https://img.shields.io/badge/license-MIT-red?style=for-the-badge" alt="License">
 
 ## Installation
 ```bash
