@@ -694,3 +694,8 @@ def echo(message):
 bot.run(api_id=YOUR_API_ID', api_hash='YOUR_API_HASH')
 ```
 - Works with all **possible** functions (`text`, `photo`, `video`, etc).
+
+
+
+<br>
+**Note**: This library is no longer maintained ([1.1.6](https://github.com/realstarexx/mehta/commit/13376a48f05409ecf5ad72e2e0b9f65ef6edc1e5))
