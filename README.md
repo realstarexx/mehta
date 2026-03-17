@@ -698,4 +698,6 @@ bot.run(api_id=YOUR_API_ID', api_hash='YOUR_API_HASH')
 
 
 <br>
-**Note**: This library is no longer maintained ([1.1.6](https://github.com/realstarexx/mehta/commit/13376a48f05409ecf5ad72e2e0b9f65ef6edc1e5))
+<p>
+  <strong>Note:</strong> This library is no longer maintained (<a href="https://github.com/realstarexx/mehta/commit/13376a48f05409ecf5ad72e2e0b9f65ef6edc1e5"><code>1.1.6</code></a>)
+</p>
